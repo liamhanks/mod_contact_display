@@ -2,16 +2,19 @@
 <extension type="module" version="3.1.0" client="site" method="upgrade">
     <name>Contact Display</name>
     <author>Liam Hanks</author>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <description>A module for displaying contact information.</description>
     <files>
         <filename>mod_contact_display.xml</filename>
         <filename module="mod_contact_display">mod_contact_display.php</filename>
-        <filename>index.html</filename>
         <filename>helper.php</filename>
+		<folder>tmpl</folder>
         <filename>tmpl/default.php</filename>
-        <filename>tmpl/index.html</filename>
     </files>
+	<languages folder="/language">
+	   <language tag="en-GB">en-GB/en-GB.mod_contact_display.ini</language>
+	   <language tag="en-GB">en-GB/en-GB.mod_contact_display.sys.ini</language>
+	</languages>
     <config>
 		<fields name="params">
 			<fieldset name="basic">
@@ -19,13 +22,18 @@
 					   name="name"
 					   type="sql"
 					   default="1"
-					   label="Select a Contact"
+					   label="MOD_CONTACT_DETAILS_SELECT_CONTACT"
 					   key_field="id"
 					   query="SELECT id,name AS value,name FROM #__contact_details"
 				/>
 				<field name="Options" type="checkboxes">
 					<option value="name">Name</option>
 					<option value="alias">Alias</option>
+					<option value="con_position">Position</option>
+				</field>
+				<field name="Display" type="checkboxes">
+					<option value="labels">Labels</option>
+					<option value="link_name">Link Name</option>
 					<option value="con_position">Position</option>
 				</field>
 			</fieldset>

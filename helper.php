@@ -21,13 +21,7 @@ class ModContact_displayHelper
      * @access public
      */    
     public static function getContactDetails($params)
-    {
-		/*
-		*	$params		Array of parameters
-		*	@contact	string: contact ID to display
-		*
-		*/
-		
+    {	
         // Obtain a database connection
 		$db = JFactory::getDbo();
 		// Retrieve the contacts' information
@@ -42,4 +36,11 @@ class ModContact_displayHelper
 		// Return the Contact Details
 		return $result;
     }
-}
+	
+	//Itemprops array (DB column => itemprop name). Maps DB column titles to itemprop names.
+	const itemprops = array(
+		'name' => 'name',
+		'alias' => null, //there is no itemprop for alias
+		'con_position' => 'title');
+
+	}
