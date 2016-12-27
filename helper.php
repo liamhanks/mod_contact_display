@@ -22,19 +22,23 @@ class ModContact_displayHelper
      */    
     public static function getContactDetails($params)
     {	
-        // Obtain a database connection
-		$db = JFactory::getDbo();
-		// Retrieve the contacts' information
-			$query = $db->getQuery(true)
-						->select($db->quoteName($params->get('Options')))
-						->from($db->quoteName('#__contact_details'))
-						->where('id = ' . $db->Quote($params->get('name')));
-			// Prepare the query
-			$db->setQuery($query);
-			// Load the row.
-			$result = $db->loadObject();			
-		// Return the Contact Details
-		return $result;
+		if($params->get('options')){
+			// Obtain a database connection
+			$db = JFactory::getDbo();
+			
+			// Retrieve the contacts' information
+			//$params->get('Display') ? $select = array_merge($params->get('Options'),$params->get('Display')) : $select = $params->get('Options');
+				$query = $db->getQuery(true)
+							->select($db->quoteName($params->get('options')))
+							->from($db->quoteName('#__contact_details'))
+							->where('id = ' . $db->Quote($params->get('name')));
+				// Prepare the query
+				$db->setQuery($query);
+				// Load the row.
+				$result = $db->loadObject();			
+			// Return the Contact Details
+			return $result;
+		}
     }
 	
 	//Itemprops array (DB column => itemprop name). Maps DB column titles to itemprop names.
