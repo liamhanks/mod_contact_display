@@ -7,11 +7,12 @@ $microdata = new JMicrodata('Person');
 
 ?>
 
-<div class="ContactDetails<?php echo $params->get('classSfx'); ?>" <?php echo $microdata->displayScope();?>>
+<div class="contact-details<?php echo $params->get('classSfx'); ?>" <?php echo $microdata->displayScope();?>>
 
 <?php foreach ($contacts as $key => $item):
 	$microItem = $microdata->content($item)->property($itemprops[$key])->display();
-	$label = '<span class="contact-label">' . JText::_('CONTACT_DETAILS_LABEL_' . strtoupper($key)) . "</span>";
+	$langStr = JText::_('MOD_CONTACT_DISPLAY_' . strtoupper(str_replace("con_","",$key)));
+	$label = '<span class="contact-label">' . $langStr . "</span>";
 ?>
 	
 	<span class="<?php echo "contact-" . $key;?>"> <?php echo $label;?> <?php echo $microItem; ?></span><br />
