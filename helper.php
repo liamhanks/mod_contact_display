@@ -32,9 +32,9 @@ class ModContact_displayHelper
 		$db = JFactory::getDbo();
 		// Retrieve the contacts' information
 			$query = $db->getQuery(true)
-						->select($db->quoteName($params['options']))
+						->select($db->quoteName($params->get('Options')))
 						->from($db->quoteName('#__contact_details'))
-						->where('id = ' . $db->Quote($params['contact']));
+						->where('id = ' . $db->Quote($params->get('name')));
 			// Prepare the query
 			$db->setQuery($query);
 			// Load the row.
