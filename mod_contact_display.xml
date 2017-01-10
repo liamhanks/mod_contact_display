@@ -26,14 +26,16 @@
 					   key_field="id"
 					   query="SELECT id,name AS value,name FROM #__contact_details"
 				/>
-				<field name="Options" type="checkboxes">
-					<option value="name">Name</option>
+				<field name="options" label="MOD_CONTACT_OPTIONS" type="checkboxes">
+					<option value="name" default="1">Name</option>
 					<option value="alias">Alias</option>
 					<option value="con_position">Position</option>
 				</field>
-				<field name="Display" type="checkboxes">
-					<option value="labels">Labels</option>
-					<option value="link_name">Link Name</option>
+			</fieldset>
+			<fieldset name="MOD_CONTACT_DISPLAY_OPTIONS">
+				<field name="display" label="MOD_CONTACT_DISPLAY_LABELS" type="checkboxes">
+					<option value="name">Name</option>
+					<option value="alias">Alias</option>
 					<option value="con_position">Position</option>
 				</field>
 			</fieldset>
