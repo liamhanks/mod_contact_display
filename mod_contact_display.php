@@ -17,6 +17,7 @@ defined('_JEXEC') or die;
 // Include the syndicate functions only once
 require_once dirname(__FILE__) . '/helper.php';
 
+//$params comes from mod_contact_display.xml (module admin configuration)
 $contacts = modContact_displayHelper::getContactDetails($params);
 
 require JModuleHelper::getLayoutPath('mod_contact_display');
