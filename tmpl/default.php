@@ -5,14 +5,17 @@ defined('_JEXEC') or die;
 $itemprops = modContact_displayHelper::itemprops;
 $microdata = new JMicrodata('Person');
 
-
 ?>
 
 <div class="contact-details<?php echo $params->get('classSfx'); ?>" <?php echo $microdata->displayScope();?>>
 
+<?php if(isset($contacts->image) && file_exists($contacts->image)): //add options to display this at top or at bottom of module. ?>
+ <img src="<?php echo $contacts->image; ?>" class="img-reponsive" alt="<?php echo $contacts->name; ?>" />
+<?php endif;?>
 
 <?php if($contacts):?>
 	<?php foreach ($contacts as $key => $item):
+	if($key !== "image"):
 		$microItem = $microdata->content($item)->property($itemprops[$key])->display();
 	?>
 		<span class="<?php echo "contact-" . $key;?>">
@@ -20,7 +23,7 @@ $microdata = new JMicrodata('Person');
 				<span class="contact-label"><?php echo JText::_('MOD_CONTACT_DISPLAY_' . strtoupper(str_replace("con_","",$key))); ?></span>
 			<?php endif; ?>
 		<?php echo $microItem; ?></span><br />
-
+	<?php endif; ?>
 	<?php endforeach;?>
 	<?php else: ?>
 	<?php
