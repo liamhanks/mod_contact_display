@@ -81,8 +81,16 @@ $microdata = new JMicrodata('Person');
 					<span class="contact-item" itemprop="postalCode"><?php echo $contact->postcode; ?></span>
 			</div>
 		<?php endif; ?>
-		</address>	
+		</address>
 	<?php endif; ?>
+	<?php if ($params->get('showTelephone')): ?>
+			<div class="contact-telephone">
+				<?php if($params->get('labelTelephone')): ?>
+					<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_TELEPHONE'); ?></span>
+				<?php endif; ?>
+					<span class="contact-item" itemprop="telephone"><?php echo $contact->telephone; ?></span>
+			</div>
+		<?php endif; ?>
 </div>
 <?php else:
 	// Get a handle to the Joomla! application object
