@@ -29,7 +29,7 @@
 				<field
 					name="showName"
 					type="radio"
-					label="MOD_CONTACT_DISPLAY_SHOW_NAME"
+					label="MOD_CONTACT_DISPLAY_NAME"
 					class="btn-group btn-group-yesno"
 					default="1"
 					>
@@ -39,7 +39,7 @@
 				<field
 					name="showAlias"
 					type="radio"
-					label="MOD_CONTACT_DISPLAY_SHOW_ALIAS"
+					label="MOD_CONTACT_DISPLAY_ALIAS"
 					class="btn-group btn-group-yesno"
 					default="0"
 					>
@@ -49,7 +49,7 @@
 				<field
 					name="showCon_position"
 					type="radio"
-					label="MOD_CONTACT_DISPLAY_SHOW_POSITION"
+					label="MOD_CONTACT_DISPLAY_POSITION"
 					class="btn-group btn-group-yesno"
 					default="0"
 					>
@@ -59,7 +59,7 @@
 				<field
 					name="showImage"
 					type="radio"
-					label="MOD_CONTACT_DISPLAY_SHOW_IMAGE"
+					label="MOD_CONTACT_DISPLAY_IMAGE"
 					class="btn-group btn-group-yesno"
 					default="0"
 					>
@@ -67,11 +67,46 @@
 					<option value="0">JNO</option>
 				</field>
 			</fieldset>
-			<fieldset name="MOD_CONTACT_DISPLAY_OPTIONS">
-				<field name="display" label="MOD_CONTACT_DISPLAY_LABELS" type="checkboxes">
-					<option value="name">Name</option>
-					<option value="alias">Alias</option>
-					<option value="con_position">Position</option>
+			<fieldset name="MOD_CONTACT_DISPLAY_LABELS">
+				<field
+						name="labelName"
+						type="radio"
+						label="MOD_CONTACT_DISPLAY_NAME"
+						class="btn-group btn-group-yesno"
+						default="0"
+						>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+				<field
+						name="labelAlias"
+						type="radio"
+						label="MOD_CONTACT_DISPLAY_ALIAS"
+						class="btn-group btn-group-yesno"
+						default="0"
+						>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+				<field
+						name="labelPosition"
+						type="radio"
+						label="MOD_CONTACT_DISPLAY_POSITION"
+						class="btn-group btn-group-yesno"
+						default="0"
+						>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+				<field
+						name="labelImage"
+						type="radio"
+						label="MOD_CONTACT_DISPLAY_IMAGE"
+						class="btn-group btn-group-yesno"
+						default="0"
+						>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
 				</field>
 			</fieldset>
 			<fieldset name="advanced">
