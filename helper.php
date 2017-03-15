@@ -35,9 +35,7 @@ class ModContact_displayHelper
 		if($select){
 			// Obtain a database connection
 			$db = JFactory::getDbo();
-			
 			// Retrieve the contacts' information
-			//$params->get('Display') ? $select = array_merge($params->get('Options'),$params->get('Display')) : $select = $params->get('Options');
 				$query = $db->getQuery(true)
 							->select($db->quoteName($select))
 							->from($db->quoteName('#__contact_details'))
