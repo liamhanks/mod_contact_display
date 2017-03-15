@@ -49,6 +49,14 @@ $microdata = new JMicrodata('Person');
 					<span class="contact-item" itemprop="streetAddress"><?php echo $contact->address; ?></span>
 			</div>
 		<?php endif; ?>
+		<?php if ($params->get('showSuburb')): ?>
+			<div class="contact-suburb">
+				<?php if($params->get('labelSuburb')): ?>
+					<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_SUBURB'); ?></span>
+				<?php endif; ?>
+					<span class="contact-item" itemprop="addressLocality"><?php echo $contact->suburb; ?></span>
+			</div>
+		<?php endif; ?>
 		</address>	
 	<?php endif; ?>
 </div>
