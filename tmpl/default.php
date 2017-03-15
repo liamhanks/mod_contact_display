@@ -1,8 +1,7 @@
 <?php 
 // No direct access
-defined('_JEXEC') or die; 
-//var_dump(JPATH_ROOT . '\\' . str_replace('/','\\',$contact->image));
-//ar_dump($params->get('showImage'));
+defined('_JEXEC') or die;
+
 ?>
 
 <?php if($contact): ?>
@@ -18,7 +17,13 @@ defined('_JEXEC') or die;
 			<?php if($params->get('labelName')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_NAME'); ?></span>
 			<?php endif; ?>
-				<span class="contact-item" itemprop="name"><?php echo $contact->name; ?></span>
+			<?php
+				$url = JRoute::_(ContactHelperRoute::getContactRoute($params->get('name'),$contact->catid));
+			?>
+				<span class="contact-item" itemprop="name">
+				<?php if($params->get('linkName')):?><a href="<?php echo $url; ?>"><?php echo $contact->name; ?></a>
+				<?php else: ?><?php echo $contact->name; ?><?php endif; ?>
+				</span>
 		</div>
 	<?php endif; ?>
 	<?php if ($params->get('showAlias')): ?>

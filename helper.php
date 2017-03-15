@@ -30,6 +30,7 @@ class ModContact_displayHelper
 			$select[] .= strtolower(substr($key,4));
 		}
 	}
+	$select[] .= 'catid'; //make sure to select the catid, we're going to need it for URL generation.
 	
 	
 		if($select){
