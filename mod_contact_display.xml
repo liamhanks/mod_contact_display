@@ -87,6 +87,26 @@
 					<option value="0">JNO</option>
 				</field>
 				<field
+					name="showCountry"
+					type="radio"
+					label="MOD_CONTACT_DISPLAY_COUNTRY"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="showPostcode"
+					type="radio"
+					label="MOD_CONTACT_DISPLAY_POSTCODE"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
 					name="showImage"
 					type="radio"
 					label="MOD_CONTACT_DISPLAY_IMAGE"
@@ -152,6 +172,26 @@
 						name="labelState"
 						type="radio"
 						label="MOD_CONTACT_DISPLAY_STATE"
+						class="btn-group btn-group-yesno"
+						default="0"
+						>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+				<field
+						name="labelCountry"
+						type="radio"
+						label="MOD_CONTACT_DISPLAY_COUNTRY"
+						class="btn-group btn-group-yesno"
+						default="0"
+						>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+				<field
+						name="labelPostcode"
+						type="radio"
+						label="MOD_CONTACT_DISPLAY_POSTCODE"
 						class="btn-group btn-group-yesno"
 						default="0"
 						>
