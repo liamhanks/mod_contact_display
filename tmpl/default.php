@@ -97,6 +97,14 @@ defined('_JEXEC') or die;
 				<span class="contact-item" itemprop="faxNumber"><?php echo $contact->fax; ?></span>
 		</div>
 	<?php endif; ?>
+	<?php if ($params->get('showEmail_to')): ?>
+		<div class="contact-misc">
+			<?php if($params->get('labelEmail_to')): ?>
+				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_EMAIL_TO'); ?></span>
+			<?php endif; ?>
+				<div class="contact-item" itemprop="email"><?php echo $contact->email_to; ?></div>
+		</div>
+	<?php endif; ?>
 	<?php if ($params->get('showMisc')): ?>
 		<div class="contact-misc">
 			<?php if($params->get('labelMisc')): ?>
