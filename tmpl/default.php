@@ -1,17 +1,15 @@
 <?php 
 // No direct access
 defined('_JEXEC') or die; 
-
-$itemprops = modContact_displayHelper::itemprops;
-$microdata = new JMicrodata('Person');
-
+//var_dump(JPATH_ROOT . '\\' . str_replace('/','\\',$contact->image));
+//ar_dump($params->get('showImage'));
 ?>
 
 <?php if($contact): ?>
-	<div class="contact-details<?php echo $params->get('classSfx'); ?>" <?php echo $microdata->displayScope();?>>
+	<div class="contact-details<?php echo $params->get('classSfx'); ?>" itemscope itemtype="https://schema.org/Person">
 
-	<?php if(isset($contact->image) && file_exists($contact->image)): //add options to display this at top or at bottom of module. ?>
-	 <img src="<?php echo $contact->image; ?>" class="img-reponsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
+	<?php if($params->get('showImage') && file_exists(JPATH_ROOT . '\\' . str_replace('/','\\',$contact->image))): //add options to display this at top or at bottom of module. ?>
+		<img src="<?php echo $contact->image; ?>" class="img-reponsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
 	<?php endif;?>
 
 	<?php // Update to individual items instead of foreach ?>

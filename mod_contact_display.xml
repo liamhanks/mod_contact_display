@@ -258,16 +258,6 @@
 						<option value="1">JYES</option>
 						<option value="0">JNO</option>
 				</field>
-				<field
-						name="labelImage"
-						type="radio"
-						label="MOD_CONTACT_DISPLAY_IMAGE"
-						class="btn-group btn-group-yesno"
-						default="0"
-						>
-						<option value="1">JYES</option>
-						<option value="0">JNO</option>
-				</field>
 			</fieldset>
 			<fieldset name="advanced">
 				<field name="classSfx" type="text" default="" label="Module Class Suffix" description="" size="100" />
