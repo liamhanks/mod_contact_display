@@ -157,6 +157,16 @@
 					<option value="0">JNO</option>
 				</field>
 				<field
+					name="showWebpage"
+					type="radio"
+					label="MOD_CONTACT_DISPLAY_WEBPAGE"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
 					name="showMisc"
 					type="radio"
 					label="MOD_CONTACT_DISPLAY_MISC"
@@ -282,6 +292,16 @@
 						name="labelEmail_to"
 						type="radio"
 						label="MOD_CONTACT_DISPLAY_EMAIL_TO"
+						class="btn-group btn-group-yesno"
+						default="0"
+						>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+				<field
+						name="labelWebpage"
+						type="radio"
+						label="MOD_CONTACT_DISPLAY_WEBPAGE"
 						class="btn-group btn-group-yesno"
 						default="0"
 						>

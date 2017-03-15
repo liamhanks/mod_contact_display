@@ -110,7 +110,15 @@ defined('_JEXEC') or die;
 			<?php if($params->get('labelEmail_to')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_EMAIL_TO'); ?></span>
 			<?php endif; ?>
-				<div class="contact-item" itemprop="email"><?php echo $contact->email_to; ?></div>
+				<span class="contact-item" itemprop="email"><?php echo $contact->email_to; ?></span>
+		</div>
+	<?php endif; ?>
+	<?php if ($params->get('showWebpage')): ?>
+		<div class="contact-webpage">
+			<?php if($params->get('labelWebpage')): ?>
+				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_WEBPAGE'); ?></span>
+			<?php endif; ?>
+				<span class="contact-item" itemprop="url"><?php echo $contact->webpage; ?></span>
 		</div>
 	<?php endif; ?>
 	<?php if ($params->get('showMisc')): ?>
