@@ -91,7 +91,10 @@ defined('_JEXEC') or die;
 			<?php if($params->get('labelTelephone')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_TELEPHONE'); ?></span>
 			<?php endif; ?>
-				<span class="contact-item" itemprop="telephone"><?php echo $contact->telephone; ?></span>
+				<span class="contact-item" itemprop="telephone">
+				<?php if($params->get('linkTelephone')):?><a href="tel:<?php echo $params->get('telephonePrefix') . $contact->telephone; ?>"><?php echo $contact->telephone; ?></a>
+				<?php else: ?><?php echo $contact->telephone; ?><?php endif; ?>
+				</span>
 		</div>
 	<?php endif; ?>
 	<?php if ($params->get('showMobile')): ?>
@@ -99,7 +102,10 @@ defined('_JEXEC') or die;
 			<?php if($params->get('labelMobile')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_MOBILE'); ?></span>
 			<?php endif; ?>
-				<span class="contact-item" itemprop="telephone"><?php echo $contact->mobile; ?></span>
+				<span class="contact-item" itemprop="telephone">
+				<?php if($params->get('linkMobile')):?><a href="tel:<?php echo $params->get('mobilePrefix') . $contact->mobile; ?>"><?php echo $contact->mobile; ?></a>
+				<?php else: ?><?php echo $contact->mobile; ?><?php endif; ?>
+				</span>
 		</div>
 	<?php endif; ?>
 	<?php if ($params->get('showFax')): ?>
@@ -115,7 +121,10 @@ defined('_JEXEC') or die;
 			<?php if($params->get('labelEmail_to')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_EMAIL_TO'); ?></span>
 			<?php endif; ?>
-				<span class="contact-item" itemprop="email"><?php echo $contact->email_to; ?></span>
+				<span class="contact-item" itemprop="email">
+				<?php if($params->get('linkEmail_to')):?><a href="<?php echo $contact->email_to; ?>"><?php echo $contact->email_to; ?></a>
+				<?php else: ?><?php echo $contact->email_to; ?><?php endif; ?>
+				</span>
 		</div>
 	<?php endif; ?>
 	<?php if ($params->get('showWebpage')): ?>
@@ -123,7 +132,10 @@ defined('_JEXEC') or die;
 			<?php if($params->get('labelWebpage')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_WEBPAGE'); ?></span>
 			<?php endif; ?>
-				<span class="contact-item" itemprop="url"><?php echo $contact->webpage; ?></span>
+				<span class="contact-item" itemprop="url">
+				<?php if($params->get('linkWebpage')):?><a href="<?php echo $contact->webpage; ?>"><?php echo $contact->webpage; ?></a>
+				<?php else: ?><?php echo $contact->webpage; ?><?php endif; ?>
+				</span>
 		</div>
 	<?php endif; ?>
 	<?php if ($params->get('showMisc')): ?>
