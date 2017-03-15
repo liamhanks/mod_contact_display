@@ -41,7 +41,7 @@
 					type="radio"
 					label="MOD_CONTACT_DISPLAY_SHOW_ALIAS"
 					class="btn-group btn-group-yesno"
-					default="1"
+					default="0"
 					>
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
@@ -51,7 +51,7 @@
 					type="radio"
 					label="MOD_CONTACT_DISPLAY_SHOW_POSITION"
 					class="btn-group btn-group-yesno"
-					default="1"
+					default="0"
 					>
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
@@ -61,7 +61,7 @@
 					type="radio"
 					label="MOD_CONTACT_DISPLAY_SHOW_IMAGE"
 					class="btn-group btn-group-yesno"
-					default="1"
+					default="0"
 					>
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
