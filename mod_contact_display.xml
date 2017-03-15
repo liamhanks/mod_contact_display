@@ -117,6 +117,16 @@
 					<option value="0">JNO</option>
 				</field>
 				<field
+					name="showFax"
+					type="radio"
+					label="MOD_CONTACT_DISPLAY_FAX"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
 					name="showImage"
 					type="radio"
 					label="MOD_CONTACT_DISPLAY_IMAGE"
@@ -212,6 +222,16 @@
 						name="labelTelephone"
 						type="radio"
 						label="MOD_CONTACT_DISPLAY_TELEPHONE"
+						class="btn-group btn-group-yesno"
+						default="0"
+						>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+				<field
+						name="labelFax"
+						type="radio"
+						label="MOD_CONTACT_DISPLAY_FAX"
 						class="btn-group btn-group-yesno"
 						default="0"
 						>

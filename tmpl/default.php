@@ -84,13 +84,21 @@ $microdata = new JMicrodata('Person');
 		</address>
 	<?php endif; ?>
 	<?php if ($params->get('showTelephone')): ?>
-			<div class="contact-telephone">
-				<?php if($params->get('labelTelephone')): ?>
-					<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_TELEPHONE'); ?></span>
-				<?php endif; ?>
-					<span class="contact-item" itemprop="telephone"><?php echo $contact->telephone; ?></span>
-			</div>
-		<?php endif; ?>
+		<div class="contact-telephone">
+			<?php if($params->get('labelTelephone')): ?>
+				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_TELEPHONE'); ?></span>
+			<?php endif; ?>
+				<span class="contact-item" itemprop="telephone"><?php echo $contact->telephone; ?></span>
+		</div>
+	<?php endif; ?>
+	<?php if ($params->get('showFax')): ?>
+		<div class="contact-fax">
+			<?php if($params->get('labelFax')): ?>
+				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_FAX'); ?></span>
+			<?php endif; ?>
+				<span class="contact-item" itemprop="faxNumber"><?php echo $contact->fax; ?></span>
+		</div>
+	<?php endif; ?>
 </div>
 <?php else:
 	// Get a handle to the Joomla! application object
