@@ -77,6 +77,16 @@
 					<option value="0">JNO</option>
 				</field>
 				<field
+					name="showState"
+					type="radio"
+					label="MOD_CONTACT_DISPLAY_STATE"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
 					name="showImage"
 					type="radio"
 					label="MOD_CONTACT_DISPLAY_IMAGE"
@@ -132,6 +142,16 @@
 						name="labelSuburb"
 						type="radio"
 						label="MOD_CONTACT_DISPLAY_SUBURB"
+						class="btn-group btn-group-yesno"
+						default="0"
+						>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+				<field
+						name="labelState"
+						type="radio"
+						label="MOD_CONTACT_DISPLAY_STATE"
 						class="btn-group btn-group-yesno"
 						default="0"
 						>
