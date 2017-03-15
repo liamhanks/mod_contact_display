@@ -22,15 +22,15 @@ class ModContact_displayHelper
      */    
     public static function getContactDetails($params)
     {	
-	//Initialize the display variables
-	$select = array();
-	foreach($params as $key => $value){
-		//only assign items that are prefixed with 'show' and that are active in the module options.
-		if((strpos($key,'show') !== false) && ($value === '1')){
-			$select[] .= strtolower(substr($key,4));
+		//Initialize the display variables
+		$select = array();
+		foreach($params as $key => $value){
+			//only assign items that are prefixed with 'show' and that are active in the module options.
+			if((strpos($key,'show') !== false) && ($value === '1')){
+				$select[] .= strtolower(substr($key,4));
+			}
 		}
-	}
-	$select[] .= 'catid'; //make sure to select the catid, we're going to need it for URL generation.
+		$select[] .= 'catid'; //make sure to select the catid, we're going to need it for URL generation.
 	
 	
 		if($select){

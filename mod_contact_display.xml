@@ -242,6 +242,16 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
+				<field
+					name="listTags"
+					type="radio"
+					label="MOD_CONTACT_DISPLAY_TAGS"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 			</fieldset>
 			<fieldset name="MOD_CONTACT_DISPLAY_LABELS">
 				<field

@@ -146,6 +146,14 @@ defined('_JEXEC') or die;
 				<div class="contact-item" itemprop="description"><?php echo $contact->misc; ?></div>
 		</div>
 	<?php endif; ?>
+	<?php if ($params->get('listTags')): ?>
+		<div class="contact-tags">
+			<?php 
+			$tags = new JHelperTags;
+			$tags->getItemTags("2",$params->get('name'));
+			var_dump($tags); ?>
+		</div>
+	<?php endif; ?>
 </div>
 <?php else:
 	// Get a handle to the Joomla! application object
