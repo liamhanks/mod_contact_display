@@ -99,6 +99,14 @@ $microdata = new JMicrodata('Person');
 				<span class="contact-item" itemprop="faxNumber"><?php echo $contact->fax; ?></span>
 		</div>
 	<?php endif; ?>
+	<?php if ($params->get('showMisc')): ?>
+		<div class="contact-misc">
+			<?php if($params->get('labelMisc')): ?>
+				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_MISC'); ?></span>
+			<?php endif; ?>
+				<div class="contact-item" itemprop="description"><?php echo $contact->misc; ?></div>
+		</div>
+	<?php endif; ?>
 </div>
 <?php else:
 	// Get a handle to the Joomla! application object
