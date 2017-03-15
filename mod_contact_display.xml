@@ -26,11 +26,45 @@
 					   key_field="id"
 					   query="SELECT id,name AS value,name FROM #__contact_details"
 				/>
-				<field name="options" label="MOD_CONTACT_DISPLAY_OPTIONS" type="checkboxes">
-					<option value="name" default="1">Name</option>
-					<option value="alias">Alias</option>
-					<option value="con_position">Position</option>
-					<option value="image">Image</option>
+				<field
+					name="showName"
+					type="radio"
+					label="MOD_CONTACT_DISPLAY_SHOW_NAME"
+					class="btn-group btn-group-yesno"
+					default="1"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="showAlias"
+					type="radio"
+					label="MOD_CONTACT_DISPLAY_SHOW_ALIAS"
+					class="btn-group btn-group-yesno"
+					default="1"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="showCon_position"
+					type="radio"
+					label="MOD_CONTACT_DISPLAY_SHOW_POSITION"
+					class="btn-group btn-group-yesno"
+					default="1"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="showImage"
+					type="radio"
+					label="MOD_CONTACT_DISPLAY_SHOW_IMAGE"
+					class="btn-group btn-group-yesno"
+					default="1"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 			</fieldset>
 			<fieldset name="MOD_CONTACT_DISPLAY_OPTIONS">

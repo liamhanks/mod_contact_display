@@ -22,14 +22,24 @@ class ModContact_displayHelper
      */    
     public static function getContactDetails($params)
     {	
-		if($params->get('options')){
+	//Initialize the display variables
+	$select = array();
+	foreach($params as $key => $value){
+		//only assign items that are prefixed with 'show' and that are active in the module options.
+		if((strpos($key,'show') !== false) && ($value === '1')){
+			$select[] .= strtolower(substr($key,4));
+		}
+	}
+	
+	
+		if($select){
 			// Obtain a database connection
 			$db = JFactory::getDbo();
 			
 			// Retrieve the contacts' information
 			//$params->get('Display') ? $select = array_merge($params->get('Options'),$params->get('Display')) : $select = $params->get('Options');
 				$query = $db->getQuery(true)
-							->select($db->quoteName($params->get('options')))
+							->select($db->quoteName($select))
 							->from($db->quoteName('#__contact_details'))
 							->where('id = ' . $db->Quote($params->get('name')));
 				// Prepare the query
