@@ -89,6 +89,14 @@ defined('_JEXEC') or die;
 				<span class="contact-item" itemprop="telephone"><?php echo $contact->telephone; ?></span>
 		</div>
 	<?php endif; ?>
+	<?php if ($params->get('showMobile')): ?>
+		<div class="contact-mobile">
+			<?php if($params->get('labelMobile')): ?>
+				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_MOBILE'); ?></span>
+			<?php endif; ?>
+				<span class="contact-item" itemprop="telephone"><?php echo $contact->mobile; ?></span>
+		</div>
+	<?php endif; ?>
 	<?php if ($params->get('showFax')): ?>
 		<div class="contact-fax">
 			<?php if($params->get('labelFax')): ?>

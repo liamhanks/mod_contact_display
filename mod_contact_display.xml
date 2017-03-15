@@ -117,9 +117,9 @@
 					<option value="0">JNO</option>
 				</field>
 				<field
-					name="showFax"
+					name="showMobile"
 					type="radio"
-					label="MOD_CONTACT_DISPLAY_FAX"
+					label="MOD_CONTACT_DISPLAY_MOBILE"
 					class="btn-group btn-group-yesno"
 					default="0"
 					>
@@ -127,9 +127,9 @@
 					<option value="0">JNO</option>
 				</field>
 				<field
-					name="showMisc"
+					name="showFax"
 					type="radio"
-					label="MOD_CONTACT_DISPLAY_MISC"
+					label="MOD_CONTACT_DISPLAY_FAX"
 					class="btn-group btn-group-yesno"
 					default="0"
 					>
@@ -150,6 +150,16 @@
 					name="showEmail_to"
 					type="radio"
 					label="MOD_CONTACT_DISPLAY_EMAIL_TO"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="showMisc"
+					type="radio"
+					label="MOD_CONTACT_DISPLAY_MISC"
 					class="btn-group btn-group-yesno"
 					default="0"
 					>
@@ -249,6 +259,16 @@
 						<option value="0">JNO</option>
 				</field>
 				<field
+						name="labelMobile"
+						type="radio"
+						label="MOD_CONTACT_DISPLAY_MOBILE"
+						class="btn-group btn-group-yesno"
+						default="0"
+						>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+				<field
 						name="labelFax"
 						type="radio"
 						label="MOD_CONTACT_DISPLAY_FAX"
@@ -259,9 +279,9 @@
 						<option value="0">JNO</option>
 				</field>
 				<field
-						name="labelMisc"
+						name="labelEmail_to"
 						type="radio"
-						label="MOD_CONTACT_DISPLAY_MISC"
+						label="MOD_CONTACT_DISPLAY_EMAIL_TO"
 						class="btn-group btn-group-yesno"
 						default="0"
 						>
@@ -269,9 +289,9 @@
 						<option value="0">JNO</option>
 				</field>
 				<field
-						name="labelEmail_to"
+						name="labelMisc"
 						type="radio"
-						label="MOD_CONTACT_DISPLAY_EMAIL_TO"
+						label="MOD_CONTACT_DISPLAY_MISC"
 						class="btn-group btn-group-yesno"
 						default="0"
 						>
