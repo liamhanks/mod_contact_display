@@ -27,7 +27,7 @@ defined('_JEXEC') or die;
 		</div>
 	<?php endif; ?>
 	<?php if ($params->get('showAlias')): ?>
-		<div class="contact-name">
+		<div class="contact-alias">
 			<?php if($params->get('labelAlias')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_ALIAS'); ?></span>
 			<?php endif; ?>
