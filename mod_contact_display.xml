@@ -183,16 +183,6 @@
 					<option value="0">JNO</option>
 				</field>
 				<field
-					name="showImage"
-					type="radio"
-					label="MOD_CONTACT_DISPLAY_IMAGE"
-					class="btn-group btn-group-yesno"
-					default="0"
-					>
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field
 					name="showEmail_to"
 					type="radio"
 					label="MOD_CONTACT_DISPLAY_EMAIL_TO"
@@ -241,6 +231,26 @@
 					>
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
+				</field>
+				<field
+					name="showImage"
+					type="radio"
+					label="MOD_CONTACT_DISPLAY_IMAGE"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="positionImage"
+					type="radio"
+					label="MOD_CONTACT_DISPLAY_POSITION_IMAGE"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">MOD_CONTACT_DISPLAY_TOP</option>
+					<option value="0">MOD_CONTACT_DISPLAY_BOTTOM</option>
 				</field>
 				<field
 					name="listTags"

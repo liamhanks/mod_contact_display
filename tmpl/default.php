@@ -7,7 +7,7 @@ defined('_JEXEC') or die;
 <?php if($contact): ?>
 	<div class="contact-details<?php echo $params->get('classSfx'); ?>" itemscope itemtype="https://schema.org/Person">
 
-	<?php if($params->get('showImage') && file_exists(JPATH_ROOT . '\\' . str_replace('/','\\',$contact->image))): //add options to display this at top or at bottom of module. ?>
+	<?php if($params->get('showImage') && $params->get('positionImage') && $contact->image): //add options to display this at top or at bottom of module. ?>
 		<img src="<?php echo $contact->image; ?>" class="img-reponsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
 	<?php endif;?>
 
@@ -161,6 +161,9 @@ defined('_JEXEC') or die;
 			?>
 		</div>
 	<?php endif; ?>
+	<?php if($params->get('showImage') && !$params->get('positionImage') && $contact->image): //add options to display this at top or at bottom of module. ?>
+		<img src="<?php echo $contact->image; ?>" class="img-reponsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
+	<?php endif;?>
 </div>
 <?php else:
 	// Get a handle to the Joomla! application object
