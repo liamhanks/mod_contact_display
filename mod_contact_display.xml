@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="1.0.4" client="site" method="upgrade">
+<extension type="module" version="1.5.0" client="site" method="upgrade">
     <name>Contact Display</name>
     <author>Liam Hanks</author>
-    <version>1.0.4</version>
+    <version>1.5.0</version>
     <description>A module for displaying contact information.</description>
     <files>
         <filename>mod_contact_display.xml</filename>
