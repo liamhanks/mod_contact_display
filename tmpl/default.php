@@ -149,9 +149,11 @@ defined('_JEXEC') or die;
 	<?php if ($params->get('listTags')): ?>
 		<div class="contact-tags">
 			<?php 
-			$tags = new JHelperTags;
-			$tags->getItemTags("2",$params->get('name'));
-			var_dump($tags); ?>
+				$tags = new JHelperTags;
+				$tags->getItemTags("com_contact.contact",$params->get('name'));
+				$tags->tagLayout = new JLayoutFile('joomla.content.tags');
+				echo $tags->tagLayout->render($tags->itemTags);
+			?>
 		</div>
 	<?php endif; ?>
 </div>
