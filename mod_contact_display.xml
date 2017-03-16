@@ -131,7 +131,7 @@
 					type="radio"
 					label="MOD_CONTACT_DISPLAY_LINK_TELEPHONE"
 					class="btn-group btn-group-yesno"
-					default="0"
+					default="1"
 					>
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
@@ -159,7 +159,7 @@
 					type="radio"
 					label="MOD_CONTACT_DISPLAY_LINK_MOBILE"
 					class="btn-group btn-group-yesno"
-					default="0"
+					default="1"
 					>
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
@@ -197,7 +197,7 @@
 					type="radio"
 					label="MOD_CONTACT_DISPLAY_LINK_EMAIL_TO"
 					class="btn-group btn-group-yesno"
-					default="0"
+					default="1"
 					>
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
@@ -261,6 +261,16 @@
 					>
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
+				</field>
+				<field
+					name="positionTags"
+					type="radio"
+					label="MOD_CONTACT_DISPLAY_POSITION_TAGS"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">MOD_CONTACT_DISPLAY_TOP</option>
+					<option value="0">MOD_CONTACT_DISPLAY_BOTTOM</option>
 				</field>
 			</fieldset>
 			<fieldset name="MOD_CONTACT_DISPLAY_LABELS">

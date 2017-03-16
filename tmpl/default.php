@@ -1,7 +1,7 @@
 <?php 
 // No direct access
 defined('_JEXEC') or die;
-
+$tags = new JHelperTags;
 ?>
 
 <?php if($contact): ?>
@@ -10,8 +10,14 @@ defined('_JEXEC') or die;
 	<?php if($params->get('showImage') && $params->get('positionImage') && $contact->image): //add options to display this at top or at bottom of module. ?>
 		<img src="<?php echo $contact->image; ?>" class="img-reponsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
 	<?php endif;?>
-
-	<?php // Update to individual items instead of foreach ?>
+	<?php if ($params->get('listTags') && $params->get('positionTags') && !empty($tags->getItemTags("com_contact.contact",$params->get('name')))): ?>
+		<div class="contact-tags">
+			<?php 
+				$tags->tagLayout = new JLayoutFile('joomla.content.tags');
+				echo $tags->tagLayout->render($tags->itemTags);
+			?>
+		</div>
+	<?php endif; ?>
 	<?php if ($params->get('showName') && $contact->name): ?>
 		<div class="contact-name">
 			<?php if($params->get('labelName')): ?>
@@ -151,9 +157,7 @@ defined('_JEXEC') or die;
 				<div class="contact-item" itemprop="description"><?php echo $contact->misc; ?></div>
 		</div>
 	<?php endif; ?>
-	<?php 
-	$tags = new JHelperTags;
-	if ($params->get('listTags') && !empty($tags->getItemTags("com_contact.contact",$params->get('name')))): ?>
+	<?php if ($params->get('listTags') && !$params->get('positionTags') && !empty($tags->getItemTags("com_contact.contact",$params->get('name')))): ?>
 		<div class="contact-tags">
 			<?php 
 				$tags->tagLayout = new JLayoutFile('joomla.content.tags');
