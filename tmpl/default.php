@@ -74,20 +74,20 @@ $tags = new JHelperTags;
 					<span class="contact-item" itemprop="addressRegion"><?php echo $contact->state; ?></span>
 			</div>
 		<?php endif; ?>
-		<?php if ($params->get('showCountry') && $contact->country): ?>
-			<div class="contact-country">
-				<?php if($params->get('labelCountry')): ?>
-					<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_COUNTRY'); ?></span>
-				<?php endif; ?>
-					<span class="contact-item" itemprop="addressCountry"><?php echo $contact->country; ?></span>
-			</div>
-		<?php endif; ?>
 		<?php if ($params->get('showPostcode') && $contact->postcode): ?>
 			<div class="contact-postcode">
 				<?php if($params->get('labelPostcode')): ?>
 					<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_POSTCODE'); ?></span>
 				<?php endif; ?>
 					<span class="contact-item" itemprop="postalCode"><?php echo $contact->postcode; ?></span>
+			</div>
+		<?php endif; ?>
+		<?php if ($params->get('showCountry') && $contact->country): ?>
+			<div class="contact-country">
+				<?php if($params->get('labelCountry')): ?>
+					<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_COUNTRY'); ?></span>
+				<?php endif; ?>
+					<span class="contact-item" itemprop="addressCountry"><?php echo $contact->country; ?></span>
 			</div>
 		<?php endif; ?>
 		</address>
