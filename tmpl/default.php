@@ -127,13 +127,18 @@ defined('_JEXEC') or die;
 				</span>
 		</div>
 	<?php endif; ?>
-	<?php if ($params->get('showWebpage')): ?>
+	<?php if ($params->get('showWebpage') && $contact->webpage): ?>
 		<div class="contact-webpage">
 			<?php if($params->get('labelWebpage')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_WEBPAGE'); ?></span>
 			<?php endif; ?>
 				<span class="contact-item" itemprop="url">
-				<?php if($params->get('linkWebpage')):?><a href="<?php echo $contact->webpage; ?>"><?php echo $contact->webpage; ?></a>
+				<?php
+					$displayUrl = parse_url($contact->webpage);
+					unset($displayUrl['scheme']);
+					$displayUrl = implode('',$displayUrl);
+				?>
+				<?php if($params->get('linkWebpage')):?><a href="<?php echo $contact->webpage; ?>"><?php echo $displayUrl; ?></a>
 				<?php else: ?><?php echo $contact->webpage; ?><?php endif; ?>
 				</span>
 		</div>
