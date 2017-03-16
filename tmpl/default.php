@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 	<?php endif;?>
 
 	<?php // Update to individual items instead of foreach ?>
-	<?php if ($params->get('showName')): ?>
+	<?php if ($params->get('showName') && $contact->name): ?>
 		<div class="contact-name">
 			<?php if($params->get('labelName')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_NAME'); ?></span>
@@ -26,7 +26,7 @@ defined('_JEXEC') or die;
 				</span>
 		</div>
 	<?php endif; ?>
-	<?php if ($params->get('showAlias')): ?>
+	<?php if ($params->get('showAlias') && $contact->aliass): ?>
 		<div class="contact-alias">
 			<?php if($params->get('labelAlias')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_ALIAS'); ?></span>
@@ -34,7 +34,7 @@ defined('_JEXEC') or die;
 				<span class="contact-item" itemprop="alternateName"><?php echo $contact->alias; ?></span>
 		</div>
 	<?php endif; ?>
-	<?php if ($params->get('showCon_position')): ?>
+	<?php if ($params->get('showCon_position') && $contact->con_position): ?>
 		<div class="contact-name">
 			<?php if($params->get('labelPosition')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_POSITION'); ?></span>
@@ -42,7 +42,7 @@ defined('_JEXEC') or die;
 				<span class="contact-item" itemprop="jobTitle"><?php echo $contact->con_position; ?></span>
 		</div>
 	<?php endif; ?>
-	<?php if ($params->get('showAddress')):?>
+	<?php if ($params->get('showAddress') && $contact->address):?>
 		<address class="contact-address" itemprop="address" itemscope itemtype="http://schema.org/Place">
 		<?php if ($params->get('showAddress')): ?>
 			<div class="contact-street-address">
@@ -52,7 +52,7 @@ defined('_JEXEC') or die;
 					<span class="contact-item" itemprop="streetAddress"><?php echo $contact->address; ?></span>
 			</div>
 		<?php endif; ?>
-		<?php if ($params->get('showSuburb')): ?>
+		<?php if ($params->get('showSuburb') && $contact->suburb): ?>
 			<div class="contact-suburb">
 				<?php if($params->get('labelSuburb')): ?>
 					<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_SUBURB'); ?></span>
@@ -60,7 +60,7 @@ defined('_JEXEC') or die;
 					<span class="contact-item" itemprop="addressLocality"><?php echo $contact->suburb; ?></span>
 			</div>
 		<?php endif; ?>
-		<?php if ($params->get('showState')): ?>
+		<?php if ($params->get('showState') && $contact->state): ?>
 			<div class="contact-state">
 				<?php if($params->get('labelState')): ?>
 					<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_STATE'); ?></span>
@@ -68,7 +68,7 @@ defined('_JEXEC') or die;
 					<span class="contact-item" itemprop="addressRegion"><?php echo $contact->state; ?></span>
 			</div>
 		<?php endif; ?>
-		<?php if ($params->get('showCountry')): ?>
+		<?php if ($params->get('showCountry') && $contact->country): ?>
 			<div class="contact-country">
 				<?php if($params->get('labelCountry')): ?>
 					<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_COUNTRY'); ?></span>
@@ -76,7 +76,7 @@ defined('_JEXEC') or die;
 					<span class="contact-item" itemprop="addressCountry"><?php echo $contact->country; ?></span>
 			</div>
 		<?php endif; ?>
-		<?php if ($params->get('showPostcode')): ?>
+		<?php if ($params->get('showPostcode') && $contact->postcode): ?>
 			<div class="contact-postcode">
 				<?php if($params->get('labelPostcode')): ?>
 					<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_POSTCODE'); ?></span>
@@ -86,7 +86,7 @@ defined('_JEXEC') or die;
 		<?php endif; ?>
 		</address>
 	<?php endif; ?>
-	<?php if ($params->get('showTelephone')): ?>
+	<?php if ($params->get('showTelephone') && $contact->telephone): ?>
 		<div class="contact-telephone">
 			<?php if($params->get('labelTelephone')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_TELEPHONE'); ?></span>
@@ -97,7 +97,7 @@ defined('_JEXEC') or die;
 				</span>
 		</div>
 	<?php endif; ?>
-	<?php if ($params->get('showMobile')): ?>
+	<?php if ($params->get('showMobile') && $contact->mobile): ?>
 		<div class="contact-mobile">
 			<?php if($params->get('labelMobile')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_MOBILE'); ?></span>
@@ -108,7 +108,7 @@ defined('_JEXEC') or die;
 				</span>
 		</div>
 	<?php endif; ?>
-	<?php if ($params->get('showFax')): ?>
+	<?php if ($params->get('showFax') && $contact->fax): ?>
 		<div class="contact-fax">
 			<?php if($params->get('labelFax')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_FAX'); ?></span>
@@ -116,7 +116,7 @@ defined('_JEXEC') or die;
 				<span class="contact-item" itemprop="faxNumber"><?php echo $contact->fax; ?></span>
 		</div>
 	<?php endif; ?>
-	<?php if ($params->get('showEmail_to')): ?>
+	<?php if ($params->get('showEmail_to') && $contact->email_to): ?>
 		<div class="contact-misc">
 			<?php if($params->get('labelEmail_to')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_EMAIL_TO'); ?></span>
@@ -143,7 +143,7 @@ defined('_JEXEC') or die;
 				</span>
 		</div>
 	<?php endif; ?>
-	<?php if ($params->get('showMisc')): ?>
+	<?php if ($params->get('showMisc') && $contact->misc): ?>
 		<div class="contact-misc">
 			<?php if($params->get('labelMisc')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_MISC'); ?></span>
@@ -151,11 +151,11 @@ defined('_JEXEC') or die;
 				<div class="contact-item" itemprop="description"><?php echo $contact->misc; ?></div>
 		</div>
 	<?php endif; ?>
-	<?php if ($params->get('listTags')): ?>
+	<?php 
+	$tags = new JHelperTags;
+	if ($params->get('listTags') && !empty($tags->getItemTags("com_contact.contact",$params->get('name')))): ?>
 		<div class="contact-tags">
 			<?php 
-				$tags = new JHelperTags;
-				$tags->getItemTags("com_contact.contact",$params->get('name'));
 				$tags->tagLayout = new JLayoutFile('joomla.content.tags');
 				echo $tags->tagLayout->render($tags->itemTags);
 			?>
