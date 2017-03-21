@@ -4,6 +4,9 @@
     <author>Liam Hanks</author>
     <version>1.5.1</version>
     <description>A module for displaying contact information.</description>
+	 <updateservers>
+    <server type="extension" priority="1" name="Contact Display Module Updates">http://joomla.liamhanks.com/updates/contact_display/extension.xml</server>
+ </updateservers>
     <files>
         <filename>mod_contact_display.xml</filename>
         <filename module="mod_contact_display">mod_contact_display.php</filename>
