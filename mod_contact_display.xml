@@ -10,6 +10,7 @@
         <filename>helper.php</filename>
 		<folder>tmpl</folder>
         <filename>tmpl/default.php</filename>
+		<filename>tmpl/horizontal.php</filename>
     </files>
 	<languages folder="/language">
 	   <language tag="en-GB">en-GB/en-GB.mod_contact_display.ini</language>
