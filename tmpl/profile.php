@@ -5,34 +5,30 @@ $tags = new JHelperTags;
 ?>
 
 <?php if($contact): ?>
-	<div class="contact-details<?php echo $params->get('classSfx'); ?>" itemscope itemtype="https://schema.org/Person">
-
-	<?php if($params->get('showImage') && $params->get('positionImage') && $contact->image): //add options to display this at top or at bottom of module. ?>
-		<img src="<?php echo $contact->image; ?>" class="img-reponsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
-	<?php endif;?>
-	<?php if ($params->get('listTags') && $params->get('positionTags') && !empty($tags->getItemTags("com_contact.contact",$params->get('name')))): ?>
-		<div class="contact-tags">
-			<?php 
-				$tags->tagLayout = new JLayoutFile('joomla.content.tags');
-				echo $tags->tagLayout->render($tags->itemTags);
-			?>
-		</div>
-	<?php endif; ?>
-	<?php if ($params->get('showName') && $contact->name): ?>
-		<div class="contact-name">
-			<?php if($params->get('labelName')): ?>
-				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_NAME'); ?></span>
+	<div id="#<?php echo $contact->alias; ?>" class="contact-details<?php echo $params->get('classSfx'); ?>" itemscope itemtype="https://schema.org/Person">
+	
+	<div class="row">
+		<?php if($params->get('showImage') && $params->get('positionImage') && $contact->image): //add options to display this at top or at bottom of module. ?>
+			<div class="contact-image col-xs-12 col-sm-3">
+				<img src="<?php echo $contact->image; ?>" class="img-reponsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
+			</div>
+		<?php endif;?>
+		<div class="contact-info col-xs-12 col-sm-9">
+			<?php if ($params->get('showName') && $contact->name): ?>
+				<<?php echo $params->get('header_tag');?> class="contact-name">
+					<?php
+						$url = JRoute::_(ContactHelperRoute::getContactRoute($params->get('name'),$contact->catid));
+					?>
+						<span class="contact-item" itemprop="name">
+						<?php if($params->get('linkName')):?><a href="<?php echo $url; ?>"><?php echo $contact->name; ?></a>
+						<?php else: ?><?php echo $contact->name; ?><?php endif; ?>
+						</span>
+				</<?php echo $params->get('header_tag');?>>
 			<?php endif; ?>
-			<?php
-				$url = JRoute::_(ContactHelperRoute::getContactRoute($params->get('name'),$contact->catid));
-			?>
-				<span class="contact-item" itemprop="name">
-				<?php if($params->get('linkName')):?><a href="<?php echo $url; ?>"><?php echo $contact->name; ?></a>
-				<?php else: ?><?php echo $contact->name; ?><?php endif; ?>
-				</span>
-		</div>
-	<?php endif; ?>
-	<?php if ($params->get('showAlias') && $contact->aliass): ?>
+		</div> <!-- /contact-info -->
+	</div> <!-- /row -->
+
+	<?php if ($params->get('showAlias') && $contact->alias): ?>
 		<div class="contact-alias">
 			<?php if($params->get('labelAlias')): ?>
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_ALIAS'); ?></span>
