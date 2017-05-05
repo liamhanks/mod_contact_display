@@ -5,7 +5,7 @@ $tags = new JHelperTags;
 ?>
 
 <?php if($contact): ?>
-	<div id="#<?php echo $contact->alias; ?>" class="contact-details<?php echo $params->get('classSfx'); ?>" itemscope itemtype="https://schema.org/Person">
+	<div class="contact-details panel panel-default<?php echo $params->get('classSfx'); ?>" itemscope itemtype="https://schema.org/Person">
 	
 	<div class="row">
 		<?php if($params->get('showImage') && $params->get('positionImage') && $contact->image): //add options to display this at top or at bottom of module. ?>
@@ -23,27 +23,15 @@ $tags = new JHelperTags;
 						<?php if($params->get('linkName')):?><a href="<?php echo $url; ?>"><?php echo $contact->name; ?></a>
 						<?php else: ?><?php echo $contact->name; ?><?php endif; ?>
 						</span>
+						
+						<?php if ($params->get('showCon_position') && $contact->con_position): ?>
+								<br /><small><span class="contact-item" itemprop="jobTitle"><?php echo $contact->con_position; ?></span></small>
+					<?php endif; ?>
 				</<?php echo $params->get('header_tag');?>>
 			<?php endif; ?>
 		</div> <!-- /contact-info -->
 	</div> <!-- /row -->
-
-	<?php if ($params->get('showAlias') && $contact->alias): ?>
-		<div class="contact-alias">
-			<?php if($params->get('labelAlias')): ?>
-				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_ALIAS'); ?></span>
-			<?php endif; ?>
-				<span class="contact-item" itemprop="alternateName"><?php echo $contact->alias; ?></span>
-		</div>
-	<?php endif; ?>
-	<?php if ($params->get('showCon_position') && $contact->con_position): ?>
-		<div class="contact-name">
-			<?php if($params->get('labelPosition')): ?>
-				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_POSITION'); ?></span>
-			<?php endif; ?>
-				<span class="contact-item" itemprop="jobTitle"><?php echo $contact->con_position; ?></span>
-		</div>
-	<?php endif; ?>
+	
 	<?php if ($params->get('showAddress') && $contact->address):?>
 		<address class="contact-address" itemprop="address" itemscope itemtype="http://schema.org/Place">
 		<?php if ($params->get('showAddress')): ?>
