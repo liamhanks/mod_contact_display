@@ -419,7 +419,19 @@
 				</field>
 			</fieldset>
 			<fieldset name="advanced">
-				<field name="classSfx" type="text" default="" label="Module Class Suffix" description="" size="100" />
+				<field 
+					name="classSfx"
+					type="text"
+					default=""
+					label="Module Class Suffix"
+					description=""
+					size="100" />
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
 			</fieldset>
 		</fields>
     </config>

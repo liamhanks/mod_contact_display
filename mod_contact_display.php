@@ -22,4 +22,4 @@ $contact = modContact_displayHelper::getContactDetails($params);
 //Load the contact component's Router for SEF URL generation.
 JLoader::register('ContactHelperRoute', JPATH_SITE . '/components/com_contact/helpers/route.php');
 
-require JModuleHelper::getLayoutPath('mod_contact_display');
+require JModuleHelper::getLayoutPath('mod_contact_display', $params->get('layout', 'default'));
