@@ -9,11 +9,11 @@ $tags = new JHelperTags;
 	
 	<div class="row">
 		<?php if($params->get('showImage') && $params->get('positionImage') && $contact->image): //add options to display this at top or at bottom of module. ?>
-			<div class="contact-image col-xs-12 col-sm-3">
+			<div class="contact-image col-xs-12 col-sm-4">
 				<img src="<?php echo $contact->image; ?>" class="img-reponsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
 			</div>
 		<?php endif;?>
-		<div class="contact-info col-xs-12 col-sm-9">
+		<div class="contact-info col-xs-12 col-sm-8">
 			<?php if ($params->get('showName') && $contact->name): ?>
 				<<?php echo $params->get('header_tag');?> class="contact-name">
 					<?php
@@ -29,6 +29,31 @@ $tags = new JHelperTags;
 					<?php endif; ?>
 				</<?php echo $params->get('header_tag');?>>
 			<?php endif; ?>
+			<?php if ($params->get('showTelephone') && $contact->telephone): ?>
+				<div class="contact-telephone">
+					<?php if($params->get('labelTelephone')): ?>
+						<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_TELEPHONE'); ?></span>
+					<?php endif; ?>
+						<span class="contact-item" itemprop="telephone">
+						<?php if($params->get('linkTelephone')):
+							$telnum = preg_replace('/, poste [0-9]{4}/','',$contact->telephone);
+							$telnum = str_replace("-","",$telnum);
+						?><a href="tel:<?php echo $params->get('telephonePrefix') . $telnum; ?>"><?php echo $contact->telephone; ?></a>
+						<?php else: ?><?php echo $contact->telephone; ?><?php endif; ?>
+						</span>
+				</div>
+			<?php endif; ?>
+			<?php if ($params->get('showEmail_to') && $contact->email_to): ?>
+				<div class="contact-misc">
+					<?php if($params->get('labelEmail_to')): ?>
+						<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_EMAIL_TO'); ?></span>
+					<?php endif; ?>
+						<span class="contact-item" itemprop="email">
+						<?php if($params->get('linkEmail_to')):?><a href="<?php echo $contact->email_to; ?>"><?php echo $contact->email_to; ?></a>
+						<?php else: ?><?php echo $contact->email_to; ?><?php endif; ?>
+						</span>
+				</div>
+	<?php endif; ?>
 		</div> <!-- /contact-info -->
 	</div> <!-- /row -->
 	
@@ -76,17 +101,6 @@ $tags = new JHelperTags;
 		<?php endif; ?>
 		</address>
 	<?php endif; ?>
-	<?php if ($params->get('showTelephone') && $contact->telephone): ?>
-		<div class="contact-telephone">
-			<?php if($params->get('labelTelephone')): ?>
-				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_TELEPHONE'); ?></span>
-			<?php endif; ?>
-				<span class="contact-item" itemprop="telephone">
-				<?php if($params->get('linkTelephone')):?><a href="tel:<?php echo $params->get('telephonePrefix') . $contact->telephone; ?>"><?php echo $contact->telephone; ?></a>
-				<?php else: ?><?php echo $contact->telephone; ?><?php endif; ?>
-				</span>
-		</div>
-	<?php endif; ?>
 	<?php if ($params->get('showMobile') && $contact->mobile): ?>
 		<div class="contact-mobile">
 			<?php if($params->get('labelMobile')): ?>
@@ -104,17 +118,6 @@ $tags = new JHelperTags;
 				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_FAX'); ?></span>
 			<?php endif; ?>
 				<span class="contact-item" itemprop="faxNumber"><?php echo $contact->fax; ?></span>
-		</div>
-	<?php endif; ?>
-	<?php if ($params->get('showEmail_to') && $contact->email_to): ?>
-		<div class="contact-misc">
-			<?php if($params->get('labelEmail_to')): ?>
-				<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_EMAIL_TO'); ?></span>
-			<?php endif; ?>
-				<span class="contact-item" itemprop="email">
-				<?php if($params->get('linkEmail_to')):?><a href="<?php echo $contact->email_to; ?>"><?php echo $contact->email_to; ?></a>
-				<?php else: ?><?php echo $contact->email_to; ?><?php endif; ?>
-				</span>
 		</div>
 	<?php endif; ?>
 	<?php if ($params->get('showWebpage') && $contact->webpage): ?>
