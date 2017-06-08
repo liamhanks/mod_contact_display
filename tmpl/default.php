@@ -7,8 +7,8 @@ $tags = new JHelperTags;
 <?php if($contact): ?>
 	<div class="contact-display-details<?php echo $params->get('classSfx'); ?>" itemscope itemtype="https://schema.org/Person">
 
-	<?php if($params->get('showImage') && $params->get('positionImage') && $contact->image): //add options to display this at top or at bottom of module. ?>
-		<img src="<?php echo $contact->image; ?>" class="img-reponsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
+	<?php if($params->get('showImage') && $params->get('positionImage') && $contact->image): ?>
+		<img src="<?php echo $contact->image; ?>" class="img-responsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
 	<?php endif;?>
 	<?php if ($params->get('listTags') && $params->get('positionTags') && !empty($tags->getItemTags("com_contact.contact",$params->get('name')))): ?>
 		<div class="contact-display-tags">
@@ -167,8 +167,8 @@ $tags = new JHelperTags;
 			?>
 		</div>
 	<?php endif; ?>
-	<?php if($params->get('showImage') && !$params->get('positionImage') && $contact->image): //add options to display this at top or at bottom of module. ?>
-		<img src="<?php echo $contact->image; ?>" class="img-reponsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
+	<?php if($params->get('showImage') && !$params->get('positionImage') && $contact->image): ?>
+		<img src="<?php echo $contact->image; ?>" class="img-responsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
 	<?php endif;?>
 </div>
 <?php else:
