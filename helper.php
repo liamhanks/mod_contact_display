@@ -49,11 +49,5 @@ class ModContact_displayHelper
 			return $result;
 		}
     }
-	
-	//Itemprops array (DB column => itemprop name). Maps DB column titles to itemprop names.
-	const itemprops = array(
-		'name' => 'name',
-		'alias' => null, //there is no itemprop for alias
-		'con_position' => 'title');
 
-	}
+}

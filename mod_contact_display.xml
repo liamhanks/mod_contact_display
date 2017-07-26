@@ -236,6 +236,14 @@
 					<option value="0">JNO</option>
 				</field>
 				<field
+					name="limitMisc"
+					type="text"
+					label="MOD_CONTACT_DISPLAY_MISC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+				</field>
+				<field
 					name="showImage"
 					type="radio"
 					label="MOD_CONTACT_DISPLAY_IMAGE"
@@ -410,7 +418,7 @@
 				<field
 						name="labelMisc"
 						type="radio"
-						label="MOD_CONTACT_DISPLAY_MISC"
+						label="MOD_CONTACT_DISPLAY_LIMIT_MISC"
 						class="btn-group btn-group-yesno"
 						default="0"
 						>
