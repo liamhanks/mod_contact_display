@@ -119,7 +119,7 @@ $tags = new JHelperTags;
 							<span class="contact-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_EMAIL_TO'); ?></span>
 						<?php endif; ?>
 							<span class="contact-item" itemprop="email">
-							<?php if($params->get('linkEmail_to')):?><a href="<?php echo $contact->email_to; ?>"><?php echo $contact->email_to; ?></a>
+							<?php if($params->get('linkEmail_to')):?><a href="mailto:<?php echo $contact->email_to; ?>"><?php echo $contact->email_to; ?></a>
 							<?php else: ?><?php echo $contact->email_to; ?><?php endif; ?>
 							</span>
 					</div>
