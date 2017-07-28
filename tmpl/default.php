@@ -5,7 +5,7 @@ $tags = new JHelperTags;
 ?>
 
 <?php if($contact): ?>
-	<div class="contact-display contact-display-details<?php echo $params->get('classSfx'); ?>" itemscope itemtype="https://schema.org/Person">
+	<div class="contact-display contact-display-details<?php echo $params->get('moduleclass_sfx'); ?>" itemscope itemtype="https://schema.org/Person">
 
 	<?php if($params->get('showImage') && $params->get('positionImage') && $contact->image): ?>
 		<div class="contact-display-image">
@@ -43,7 +43,7 @@ $tags = new JHelperTags;
 		</div>
 	<?php endif; ?>
 	<?php if ($params->get('showCon_position') && $contact->con_position): ?>
-		<div class="contact-display-name">
+		<div class="contact-display-position">
 			<?php if($params->get('labelPosition')): ?>
 				<span class="contact-display-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_POSITION'); ?></span>
 			<?php endif; ?>
@@ -132,8 +132,9 @@ $tags = new JHelperTags;
 				<span class="contact-display-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_EMAIL_TO'); ?></span>
 			<?php endif; ?>
 				<span class="contact-display-item" itemprop="email">
-				<?php if($params->get('linkEmail_to')):?><a href="mailto:<?php echo $contact->email_to; ?>"><?php echo $contact->email_to; ?></a>
-				<?php else: ?><?php echo $contact->email_to; ?><?php endif; ?>
+				<?php 
+				$email_link = $params->get('linkEmail_to') ? "1" : "0";
+				echo JHtml::_('email.cloak',$contact->email_to,$email_link); ?>
 				</span>
 		</div>
 	<?php endif; ?>

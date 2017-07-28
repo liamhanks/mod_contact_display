@@ -430,7 +430,7 @@
 			</fieldset>
 			<fieldset name="advanced">
 				<field 
-					name="classSfx"
+					name="moduleclass_sfx"
 					type="text"
 					default=""
 					label="Module Class Suffix"
