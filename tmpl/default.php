@@ -57,7 +57,7 @@ $tags = new JHelperTags;
 				<?php if($params->get('labelAddress')): ?>
 					<span class="contact-display-label"><?php echo JTEXT::_('MOD_CONTACT_DISPLAY_ADDRESS'); ?></span>
 				<?php endif; ?>
-					<span class="contact-display-item" itemprop="streetAddress"><?php echo $contact->address; ?></span>
+					<span class="contact-display-item" itemprop="streetAddress"><?php echo nl2br($contact->address); ?></span>
 			</div>
 		<?php endif; ?>
 		<?php if ($params->get('showSuburb') && $contact->suburb): ?>
