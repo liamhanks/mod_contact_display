@@ -1,15 +1,20 @@
 <?php 
 // No direct access
 defined('_JEXEC') or die;
+
+//Get item tags
 $tags = new JHelperTags;
+
+//Get contact image
+$contactImage = $params->get('alternateImage') ?: $contact->image;
 ?>
 
 <?php if($contact): ?>
 	<div class="contact-display contact-display-details<?php echo $params->get('moduleclass_sfx'); ?>" itemscope itemtype="https://schema.org/Person">
 
-	<?php if($params->get('showImage') && $params->get('positionImage') && $contact->image): ?>
+	<?php if($params->get('showImage') && $params->get('positionImage') && $contactImage): ?>
 		<div class="contact-display-image">
-			<img src="<?php echo $contact->image; ?>" class="img-responsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
+			<img src="<?php echo $contactImage; ?>" class="img-responsive" alt="<?php echo $contactImage; ?>" itemprop="image" />
 		</div>
 	<?php endif;?>
 	<?php if ($params->get('listTags') && $params->get('positionTags') && !empty($tags->getItemTags("com_contact.contact",$params->get('name')))): ?>
@@ -170,9 +175,9 @@ $tags = new JHelperTags;
 			?>
 		</div>
 	<?php endif; ?>
-	<?php if($params->get('showImage') && !$params->get('positionImage') && $contact->image): ?>
+	<?php if($params->get('showImage') && !$params->get('positionImage') && $contactImage): ?>
 		<div class="contact-display-image">
-			<img src="<?php echo $contact->image; ?>" class="contact-image img-responsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
+			<img src="<?php echo $contactImage; ?>" class="contact-image img-responsive" alt="<?php echo $contactImage; ?>" itemprop="image" />
 		</div>
 	<?php endif;?>
 </div>
