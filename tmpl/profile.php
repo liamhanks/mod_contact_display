@@ -1,7 +1,12 @@
 <?php 
 // No direct access
 defined('_JEXEC') or die;
+
+//Get item tags
 $tags = new JHelperTags;
+
+//Get contact image
+$contactImage = $params->get('alternateImage') ?: $contact->image;
 ?>
 
 <?php if($contact): ?>
@@ -10,8 +15,8 @@ $tags = new JHelperTags;
 	<div class="row">
 		<?php if($params->get('showImage') && $params->get('positionImage')):  ?>
 			<div class="contact-display-image col-xs-12 col-sm-4 col-md-3" style="margin-top: 0;">
-			<?php if ($contact->image): ?>
-				<img src="<?php echo $contact->image; ?>" class="img-responsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
+			<?php if ($contactImage): ?>
+				<img src="<?php echo $contactImage; ?>" class="img-responsive" alt="<?php echo $contact->name; ?>" itemprop="image" />
 			<?php endif; ?>
 			</div>
 		<?php endif;?>
