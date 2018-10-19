@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="1.5.3" client="site" method="upgrade">
+<extension type="module" version="1.5.4" client="site" method="upgrade">
     <name>Contact Display</name>
     <author>Liam Hanks</author>
-    <version>1.5.3</version>
+    <version>1.5.4</version>
     <description>A module for displaying a contact's information.</description>
 	 <updateservers>
     <server type="extension" priority="1" name="Contact Display Module Updates">http://joomla.liamhanks.com/updates/contact_display/extension.xml</server>
