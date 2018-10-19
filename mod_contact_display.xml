@@ -256,6 +256,13 @@
 					<option value="0">JNO</option>
 				</field>
 				<field
+					name="alternateImage"
+					type="media"
+					label="MOD_CONTACT_DISPLAY_ALTERNATE_IMAGE"
+					default=""
+					>
+				</field>
+				<field
 					name="positionImage"
 					type="radio"
 					label="MOD_CONTACT_DISPLAY_POSITION_IMAGE"
@@ -420,7 +427,7 @@
 				<field
 						name="labelMisc"
 						type="radio"
-						label="MOD_CONTACT_DISPLAY_LIMIT_MISC"
+						label="MOD_CONTACT_DISPLAY_MISC"
 						class="btn-group btn-group-yesno"
 						default="0"
 						>
