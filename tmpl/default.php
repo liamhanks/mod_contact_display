@@ -7,6 +7,9 @@ $tags = new JHelperTags;
 
 //Get contact image
 $contactImage = $params->get('alternateImage') ?: $contact->image;
+
+//If image is from management system, append the correct size for this context
+if((strpos($contactImage,'photos.php') !== false) && (strpos($contactImage,'thumb_') === false)) $contactImage .= '&w=340';
 ?>
 
 <?php if($contact): ?>
