@@ -5,7 +5,7 @@
     <version>1.5.6</version>
     <description>A module for displaying a contact's information.</description>
 	 <updateservers>
-    <server type="extension" priority="1" name="Contact Display Module Updates">https://raw.githubusercontent.com/liamhanks/mod_contact_display/master/extension.xml</server>
+    <server type="extension" priority="1" name="Contact Display Module Updates">https://liamhanks.github.io/mod_contact_display/extension.xml</server>
  </updateservers>
     <files>
         <filename>mod_contact_display.xml</filename>
