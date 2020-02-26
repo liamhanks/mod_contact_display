@@ -1,19 +1,21 @@
-<update>
-    <name>Contact Display 1.5.6</name>
-    <description>A module to display a contact's information.</description>
-    <element>contact_display</element>
-    <type>file</type>
-    <version>1.5.6</version>
-    <infourl title="Git">https://github.com/liamhanks/mod_contact_display/</infourl>
-    <downloads>
-        <downloadurl type="full" format="zip">https://github.com/liamhanks/mod_contact_display/archive/master.zip</downloadurl>
-    </downloads>
-    <tags>
+<updates>
+    <update>
+        <name>Contact Display 1.5.6</name>
+        <description>A module to display a contact's information.</description>
+        <element>contact_display</element>
+        <type>file</type>
+        <version>1.5.6</version>
+        <infourl title="Git">https://github.com/liamhanks/mod_contact_display/</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">https://github.com/liamhanks/mod_contact_display/archive/master.zip</downloadurl>
+        </downloads>
+        <tags>
         <tag>stable</tag>
-    </tags>
-    <maintainer>Liam Hanks</maintainer>
-    <maintainerurl>http://www.liamhanks.com</maintainerurl>
-    <section></section>
-    <client>0</client>
-    <targetplatform name="joomla" version="3.6" />
- </update>
+        </tags>
+        <maintainer>Liam Hanks</maintainer>
+        <maintainerurl>http://www.liamhanks.com</maintainerurl>
+        <section></section>
+        <client>0</client>
+        <targetplatform name="joomla" version="3.6" />
+    </update>
+</updates>
