@@ -1,6 +1,6 @@
 <update>
     <name>Contact Display 1.5.6</name>
-    <description>An module for display a contact's information.</description>
+    <description>A module to display a contact's information.</description>
     <element>contact_display</element>
     <type>file</type>
     <version>1.5.6</version>
