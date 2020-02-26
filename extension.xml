@@ -17,6 +17,6 @@
         <section></section>
         <client>0</client>
         <php_minimum>5.4.0</php_minimum>
-        <targetplatform name="joomla" version="3.[6789]" />
+        <targetplatform name="joomla" version="3.*" />
     </update>
 </updates>
