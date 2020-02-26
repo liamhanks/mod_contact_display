@@ -14,5 +14,6 @@
     <maintainer>Liam Hanks</maintainer>
     <maintainerurl>http://www.liamhanks.com</maintainerurl>
     <section></section>
+    <client>0</client>
     <targetplatform name="joomla" version="3.6" />
  </update>
