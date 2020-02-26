@@ -3,7 +3,7 @@
         <name>Contact Display 1.5.6</name>
         <description>A module to display a contact's information.</description>
         <element>contact_display</element>
-        <type>file</type>
+        <type>module</type>
         <version>1.5.6</version>
         <infourl title="Git">https://github.com/liamhanks/mod_contact_display/</infourl>
         <downloads>
@@ -16,6 +16,7 @@
         <maintainerurl>http://www.liamhanks.com</maintainerurl>
         <section></section>
         <client>0</client>
+        <php_minimum>5.4.0</php_minimum>
         <targetplatform name="joomla" version="3.6" />
     </update>
 </updates>
