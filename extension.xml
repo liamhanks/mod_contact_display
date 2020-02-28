@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <updates>
     <update>
-        <name>Contact Display 1.5.6</name>
+        <name>Contact Display</name>
         <description>A module to display contact information.</description>
         <element>mod_contact_display</element>
         <type>module</type>
-        <version>1.5.6</version>
+        <version>1.5.7</version>
         <folder/>
         <infourl title="Git">https://github.com/liamhanks/mod_contact_display/</infourl>
         <downloads>
